@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Virtual Assistant</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+	<header>
+		<h1>Virtual Assistant</h1>
+	</header>
+	<main>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		
+        
+        <div class="container">
+			<h2>Ask me anything!</h2>
+			<p>Click the microphone to start recording your question, and I'll do my best to provide an answer.</p>
+		
+			
+			
+			<audio id="audio" class="audio-player" controls></audio>
+      <!-- <br> <br> -->
+			<button id="start-btn"  class="record">start</button>
+      <canvas id="waveform" class="audio-waveform"></canvas>
+
+		</div>
+	</main>
+
+  <script src="{% static '/js/handle_audio.js' %}" > </script>
+  <script src="{% static '/js/vis.js' %}" > </script> 
+
+</body>
+</html>
